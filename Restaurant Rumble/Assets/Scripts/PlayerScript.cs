@@ -1,16 +1,63 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] float movementSpeed;
+
+    Vector2 moveInput;
+    Rigidbody rb;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
     }
-
-    // Update is called once per frame
     void Update()
     {
+        // Moves the player
 
+        transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime);
+
+        // Rotate player among movement direction
+
+        if (moveInput != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(moveInput.y * -1, moveInput.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(transform.rotation.x, angle, transform.rotation.z);
+        }
+    }
+
+    void OnMove(InputValue value)
+    {
+        moveInput = value.Get<Vector2>();
+    }
+
+    void OnGrab(InputValue value) 
+    {
+        GameObject[] taggedObjectsArray = GameObject.FindGameObjectsWithTag("Object");
+
+        Vector3 distanceToNearestObject = GetClosestEnemy(taggedObjectsArray).position - transform.position;
+
+        //if (distanceToNearestObject)
+        print(distanceToNearestObject.magnitude);
+
+    }
+
+    Transform GetClosestEnemy(GameObject[] enemies)
+    {
+        Transform tMin = null;
+        float minDist = Mathf.Infinity;
+        Vector3 currentPos = transform.position;
+        foreach (GameObject t in enemies)
+        {
+            float dist = Vector3.Distance(t.transform.position, currentPos);
+            if (dist < minDist)
+            {
+                tMin = t.transform;
+                minDist = dist;
+            }
+        }
+        return tMin;
     }
 }
