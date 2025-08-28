@@ -11,9 +11,6 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(Keycode.A)) 
-        {
-            transform.position += Vector
-        }
+
     }
 }
