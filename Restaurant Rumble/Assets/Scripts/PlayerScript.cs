@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] float movementSpeed;
 
     Vector2 moveInput;
+    float sprint;
     Rigidbody rb;
 
     void Start()
@@ -17,7 +18,12 @@ public class PlayerScript : MonoBehaviour
     {
         // Moves the player
 
-        transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime);
+        if (sprint == 0) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime); }
+
+        else if (sprint == 1) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime*1.5f); }
+
+        print(sprint);
+
 
         // Rotate player among movement direction
 
@@ -31,6 +37,11 @@ public class PlayerScript : MonoBehaviour
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+    }
+
+    void OnSprint(InputValue value)
+    {
+        sprint = value.Get<float>();
     }
 
     void OnGrab(InputValue value) 
@@ -59,5 +70,10 @@ public class PlayerScript : MonoBehaviour
             }
         }
         return tMin;
+    }
+
+    private void LateUpdate()
+    {
+        sprint = 0;
     }
 }
