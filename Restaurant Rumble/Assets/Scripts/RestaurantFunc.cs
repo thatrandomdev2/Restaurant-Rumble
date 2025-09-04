@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Supply : MonoBehaviour
+public class RestaurantFunc : MonoBehaviour
 {
     [SerializeField] double customerInflux = 1;
     [SerializeField] double customerSatisf = 1;
@@ -32,7 +32,7 @@ public class Supply : MonoBehaviour
             currentSupply -= 2;
             customerSatisf += .1;
             customerInflux += .05;
-            print("stats: " + customerInflux + customerSatisf + currentMoneys + currentSupply);
+            print("hath been completeted");
         }
     }
 
