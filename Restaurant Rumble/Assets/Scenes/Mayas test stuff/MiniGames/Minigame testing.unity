@@ -243,7 +243,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 551242874}
   - component: {fileID: 551242873}
   - component: {fileID: 551242877}
+  - component: {fileID: 551242878}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -510,12 +511,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.4748006, y: 1.2984327, z: 1.9252042}
   m_Center: {x: 0.005785942, y: 0.14921641, z: 0.21905893}
+--- !u!114 &551242878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551242872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c0ed09d6d2b2b43aa68412cc7ea679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractArea: {fileID: 551242877}
 --- !u!1001 &730180615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -586,6 +600,7 @@ GameObject:
   - component: {fileID: 1073593895}
   - component: {fileID: 1073593894}
   - component: {fileID: 1073593898}
+  - component: {fileID: 1073593899}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -697,12 +712,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.4748006, y: 1.2984327, z: 1.9252042}
   m_Center: {x: 0.005785942, y: 0.14921641, z: 0.21905893}
+--- !u!114 &1073593899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073593893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c0ed09d6d2b2b43aa68412cc7ea679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractArea: {fileID: 1073593898}
 --- !u!1 &1595896650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1085,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
