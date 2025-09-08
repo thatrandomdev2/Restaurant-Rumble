@@ -9,6 +9,12 @@ public class PlayerScript : MonoBehaviour
     float sprint;
     Rigidbody rb;
 
+    [SerializeField] GameObject pickup;
+
+    Vector3 distanceToNearestObject;
+
+    GameObject minObject = null;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -22,7 +28,28 @@ public class PlayerScript : MonoBehaviour
 
         else if (sprint == 1) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime*1.5f); }
 
-        print(sprint);
+        //print(sprint);
+
+        GameObject[] taggedObjectsArray = GameObject.FindGameObjectsWithTag("Object");
+
+        if (taggedObjectsArray.Length != 0)
+        {
+            distanceToNearestObject = GetClosestEnemy(taggedObjectsArray).position - transform.position;
+
+            if (distanceToNearestObject.magnitude < 3f && minObject != null)
+            {
+                pickup.SetActive(true);
+            }
+            else
+            {
+                pickup.SetActive(false);
+            }
+        }
+        else 
+        {
+            minObject = null;
+            pickup.SetActive(false);
+        }
 
 
         // Rotate player among movement direction
@@ -46,13 +73,10 @@ public class PlayerScript : MonoBehaviour
 
     void OnGrab(InputValue value) 
     {
-        GameObject[] taggedObjectsArray = GameObject.FindGameObjectsWithTag("Object");
-
-        Vector3 distanceToNearestObject = GetClosestEnemy(taggedObjectsArray).position - transform.position;
-
-        //if (distanceToNearestObject)
-        print(distanceToNearestObject.magnitude);
-
+        if (distanceToNearestObject.magnitude < 3f && minObject != null)
+        {
+            Destroy(minObject);
+        }
     }
 
     Transform GetClosestEnemy(GameObject[] enemies)
@@ -66,6 +90,7 @@ public class PlayerScript : MonoBehaviour
             if (dist < minDist)
             {
                 tMin = t.transform;
+                minObject = t;
                 minDist = dist;
             }
         }
