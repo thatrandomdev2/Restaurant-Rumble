@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,8 @@ public class PlayerScript : MonoBehaviour
     Rigidbody rb;
 
     [SerializeField] GameObject pickup;
+
+    public List<PickupObject> pickupObjects = new List<PickupObject>();
 
     Vector3 distanceToNearestObject;
 
@@ -73,8 +76,9 @@ public class PlayerScript : MonoBehaviour
 
     void OnGrab(InputValue value) 
     {
-        if (distanceToNearestObject.magnitude < 3f && minObject != null)
+        if (distanceToNearestObject.magnitude < 3f && minObject != null && pickupObjects.Count <= 2)
         {
+            pickupObjects.Add(minObject.GetComponent<Object>().pickupObject);
             Destroy(minObject);
         }
     }
