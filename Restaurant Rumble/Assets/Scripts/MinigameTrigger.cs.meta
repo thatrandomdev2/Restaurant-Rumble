@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: 17c0ed09d6d2b2b43aa68412cc7ea679
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - InteractArea: {instanceID: 0}
+  - MinigameScene: {fileID: 3560418935242901700, guid: 4e5dfb9b210ee7647b05d68c534a01bb, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
