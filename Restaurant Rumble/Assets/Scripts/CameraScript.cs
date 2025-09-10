@@ -11,7 +11,6 @@ public class CameraScript : MonoBehaviour
     }
     void Update()
     {
-        //distanceToPlayer = transform.position - player.transform.position;
         targetPos = Vector3.Lerp(targetPos, player.transform.position, 0.01f);
         transform.position = targetPos + new Vector3(0,10,-11);
     }

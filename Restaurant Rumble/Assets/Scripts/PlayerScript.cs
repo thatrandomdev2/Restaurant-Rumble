@@ -31,13 +31,14 @@ public class PlayerScript : MonoBehaviour
 
         else if (sprint == 1) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime*1.5f); }
 
-        //print(sprint);
 
-        GameObject[] taggedObjectsArray = GameObject.FindGameObjectsWithTag("Object");
 
-        if (taggedObjectsArray.Length != 0)
+
+        if (GameObject.FindGameObjectsWithTag("Object").Length != 0)
         {
-            distanceToNearestObject = GetClosestEnemy(taggedObjectsArray).position - transform.position;
+            GameObject nearestGameObject = GetClosestObject("Object");
+
+            distanceToNearestObject = nearestGameObject.transform.position - transform.position;
 
             if (distanceToNearestObject.magnitude < 3f && minObject != null)
             {
@@ -83,22 +84,25 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    Transform GetClosestEnemy(GameObject[] enemies)
+    GameObject GetClosestObject(string tag)
     {
+        GameObject[] objects = GameObject.FindGameObjectsWithTag(tag);
+
         Transform tMin = null;
         float minDist = Mathf.Infinity;
+        GameObject closestObject = null;
         Vector3 currentPos = transform.position;
-        foreach (GameObject t in enemies)
+        foreach (GameObject t in objects)
         {
             float dist = Vector3.Distance(t.transform.position, currentPos);
             if (dist < minDist)
             {
                 tMin = t.transform;
-                minObject = t;
+                closestObject = t;
                 minDist = dist;
             }
         }
-        return tMin;
+        return closestObject;
     }
 
     private void LateUpdate()
