@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerInteract : MonoBehaviour
 {
     public float customerInflux = 1;
+    [SerializeField] GameObject interactible;
     [SerializeField] float customerSatisf = 1;
     [SerializeField] int currentMoneys;
     [SerializeField] int startingMoneys = 100;
@@ -27,11 +28,16 @@ public class PlayerInteract : MonoBehaviour
         else if (other.CompareTag("moneyInteractable"))
         {
             // start the minigame sequence; if lost, customer satisfaction -2; if won:
-            if (currentSupply < 2) return;
+            // if (currentSupply < 2) return;
             currentSupply -= 2;
             customerSatisf += 1;
             customerInflux -= 1;
+            Instantiate(interactible);
             print("hath been completeted");
+        }
+        else
+        {
+            return;
         }
     }
 
