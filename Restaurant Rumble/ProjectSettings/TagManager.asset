@@ -8,6 +8,7 @@ TagManager:
   - supplyInteractable
   - Target
   - TargetRestaurantTrigger1
+  - moneyInteractable
   layers:
   - Default
   - TransparentFX
