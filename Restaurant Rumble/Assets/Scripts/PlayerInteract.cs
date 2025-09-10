@@ -2,10 +2,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class RestaurantFunc : MonoBehaviour
+public class PlayerInteract : MonoBehaviour
 {
-    [SerializeField] double customerInflux = 1;
-    [SerializeField] double customerSatisf = 1;
+    public float customerInflux = 1;
+    [SerializeField] float customerSatisf = 1;
     [SerializeField] int currentMoneys;
     [SerializeField] int startingMoneys = 100;
 
@@ -26,12 +26,11 @@ public class RestaurantFunc : MonoBehaviour
         }
         else if (other.CompareTag("moneyInteractable"))
         {
-            // start the minigame sequence; if lost, do nothing; if won:
-            // if lost, customer satisfaction -.02;
+            // start the minigame sequence; if lost, customer satisfaction -2; if won:
             if (currentSupply < 2) return;
             currentSupply -= 2;
-            customerSatisf += .1;
-            customerInflux += .05;
+            customerSatisf += 1;
+            customerInflux -= 1;
             print("hath been completeted");
         }
     }

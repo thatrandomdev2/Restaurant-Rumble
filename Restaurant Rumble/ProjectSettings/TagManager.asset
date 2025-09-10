@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Object
   - supplyInteractable
+  - Target
+  - TargetRestaurantTrigger1
   layers:
   - Default
   - TransparentFX
