@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
-  pickup: {fileID: 0}
+  pickup: {fileID: 850474412868813937}
   pickupObjects: []
 --- !u!136 &3001974807921794450
 CapsuleCollider:
