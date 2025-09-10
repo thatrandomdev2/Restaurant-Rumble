@@ -32,12 +32,10 @@ public class PlayerScript : MonoBehaviour
         else if (sprint == 1) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime*1.5f); }
 
 
+        GameObject nearestGameObject = GetClosestObject("Object");
 
-
-        if (GameObject.FindGameObjectsWithTag("Object").Length != 0)
+        if (nearestGameObject == null)
         {
-            GameObject nearestGameObject = GetClosestObject("Object");
-
             distanceToNearestObject = nearestGameObject.transform.position - transform.position;
 
             if (distanceToNearestObject.magnitude < 3f && minObject != null)
@@ -84,9 +82,13 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    // Finds the nearest object of a tag to the parent of the script; returns null if no objects are found
+
     GameObject GetClosestObject(string tag)
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag(tag);
+
+        if (objects.Length == 0) return null;
 
         Transform tMin = null;
         float minDist = Mathf.Infinity;
