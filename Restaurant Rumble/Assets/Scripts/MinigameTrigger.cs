@@ -9,26 +9,50 @@ public class MinigameTrigger : MonoBehaviour
     //game 2 is matching 
     //game 3 is ordering 
     // game 4 is balancing
-    private bool InInteractArea;
+     TimingMinigame currentPoints;
+     TimingMinigame pointRequirement;
+    public bool InInteractArea;
+    public bool MinigameOn;
     [SerializeField] Collider InteractArea;
     [SerializeField] Canvas MinigameScene; //i have never wanted to tell a piece of text to end its own life before but that might change RIGHT HERE APPARENTLY
+    void Start()
+    {
+        MinigameOn = false; 
+       
+    }
     void Update()
     {
+        
        if (InInteractArea&&Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("you interacted with the thingy");
+            Instantiate(MinigameScene);
+            InInteractArea = false;
+            MinigameOn= true;
+           Debug.Log("you interacted with the thingy");
+            
+        }
+       else
+        {
+            return;
+        }
+
+        if (MinigameOn && currentPoints == pointRequirement)
+        {
+            Debug.Log("You DID IT :D");
+            MinigameOn = false;
+            MinigameScene.GetComponent<Canvas>().enabled= false;
+
         } 
     }
 
     void OnTriggerEnter(Collider other) //minigame trigger & appear
     {
-
         InInteractArea = true;
         
     }
 
     void OnTriggerExit(Collider other)
     {
-      InInteractArea=false;  
+      InInteractArea=true;  
     }
 }
