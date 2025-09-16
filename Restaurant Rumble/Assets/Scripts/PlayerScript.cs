@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     // Inventory Variables
 
     [SerializeField] GameObject pickupPopUp;
+    PopUpScript popUpScript;
     public List<PickupObject> pickupObjects = new List<PickupObject>();
     Vector3 distanceToNearestObject;
     GameObject nearestGameObject;
@@ -22,6 +23,7 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        popUpScript = pickupPopUp.GetComponent<PopUpScript>();
     }
     void Update()
     {
@@ -29,7 +31,7 @@ public class PlayerScript : MonoBehaviour
 
         if (sprint == 0) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime); }
 
-        else if (sprint == 1) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime*1.5f); }
+        else if (sprint == 1) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime * 1.5f); }
 
         // Detects whether there are pickup objects close enough to enable the pickup pop up
 
@@ -41,17 +43,17 @@ public class PlayerScript : MonoBehaviour
 
             if (distanceToNearestObject.magnitude < 3f)
             {
-                pickupPopUp.SetActive(true);
+                popUpScript.popUpEnabled = true;
             }
             else
             {
-                pickupPopUp.SetActive(false);
+                popUpScript.popUpEnabled = false;
             }
         }
         else
         {
             nearestGameObject = null;
-            pickupPopUp.SetActive(false);
+            popUpScript.popUpEnabled = false;
         }
 
 
@@ -74,7 +76,7 @@ public class PlayerScript : MonoBehaviour
         sprint = value.Get<float>();
     }
 
-    void OnGrab(InputValue value) 
+    void OnGrab(InputValue value)
     {
         if (distanceToNearestObject.magnitude < 3f && nearestGameObject != null && pickupObjects.Count <= 2)
         {
