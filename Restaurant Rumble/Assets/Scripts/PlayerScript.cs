@@ -4,19 +4,19 @@ using UnityEngine.InputSystem;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] float movementSpeed;
+    // Movement Variables
 
+    [SerializeField] float movementSpeed;
     Vector2 moveInput;
     float sprint;
     Rigidbody rb;
 
-    [SerializeField] GameObject pickup;
+    // Inventory Variables
 
+    [SerializeField] GameObject pickupPopUp;
     public List<PickupObject> pickupObjects = new List<PickupObject>();
-
     Vector3 distanceToNearestObject;
-
-    GameObject minObject = null;
+    GameObject nearestGameObject;
 
     void Start()
     {
@@ -31,30 +31,31 @@ public class PlayerScript : MonoBehaviour
 
         else if (sprint == 1) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime*1.5f); }
 
+        // Detects whether there are pickup objects close enough to enable the pickup pop up
 
-        GameObject nearestGameObject = GetClosestObject("Object");
+        nearestGameObject = GetClosestObject("Object");
 
-        if (nearestGameObject == null)
+        if (nearestGameObject != null && pickupObjects.Count <= 2)
         {
             distanceToNearestObject = nearestGameObject.transform.position - transform.position;
 
-            if (distanceToNearestObject.magnitude < 3f && minObject != null)
+            if (distanceToNearestObject.magnitude < 3f)
             {
-                pickup.SetActive(true);
+                pickupPopUp.SetActive(true);
             }
             else
             {
-                pickup.SetActive(false);
+                pickupPopUp.SetActive(false);
             }
         }
         else 
         {
-            minObject = null;
-            pickup.SetActive(false);
+            nearestGameObject = null;
+            pickupPopUp.SetActive(false);
         }
 
 
-        // Rotate player among movement direction
+        // Rotates player among movement direction
 
         if (moveInput != Vector2.zero)
         {
@@ -75,10 +76,10 @@ public class PlayerScript : MonoBehaviour
 
     void OnGrab(InputValue value) 
     {
-        if (distanceToNearestObject.magnitude < 3f && minObject != null && pickupObjects.Count <= 2)
+        if (distanceToNearestObject.magnitude < 3f && nearestGameObject != null && pickupObjects.Count <= 2)
         {
-            pickupObjects.Add(minObject.GetComponent<Object>().pickupObject);
-            Destroy(minObject);
+            pickupObjects.Add(nearestGameObject.GetComponent<Object>().pickupObject);
+            Destroy(nearestGameObject);
         }
     }
 
