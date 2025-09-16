@@ -48,7 +48,7 @@ public class PlayerScript : MonoBehaviour
                 pickupPopUp.SetActive(false);
             }
         }
-        else 
+        else
         {
             nearestGameObject = null;
             pickupPopUp.SetActive(false);
