@@ -2,13 +2,25 @@ using UnityEngine;
 using UnityEngine.UI;
 public class TimingMinigame : MonoBehaviour
 {
-    public int pointRequirement;
+    public int pointRequirement = 5;
     public int currentPoints = 0;
-    private bool ActiveThingy;
+    private bool UpperActiveThingy;
+    private bool LowerActiveThingy;
     private GameObject Dave;
+    [SerializeField] GameObject Bar;
+    [SerializeField] Component UpperThingy;
+    [SerializeField] Component LowerThingy;
+
+   
     void Update()
     {
-        if (ActiveThingy&&Input.GetKeyDown(KeyCode.Space)) {
+        if (UpperActiveThingy&&Input.GetKeyDown(KeyCode.A)&&Dave!=null) {
+            currentPoints++;
+            Dave.GetComponent<Image>().color = Color.green;
+            Dave.GetComponent<Collider2D>().enabled = false;
+        }
+        else if (LowerActiveThingy&&Input.GetKeyDown(KeyCode.D) && Dave != null)
+        {
             currentPoints++;
             Dave.GetComponent<Image>().color = Color.green;
             Dave.GetComponent<Collider2D>().enabled = false;
@@ -17,17 +29,29 @@ public class TimingMinigame : MonoBehaviour
 
 //WHAT DO YOU WANT FORM MEEE YOU IDIOTIC CABBAGE YOU GRAOUND BEEF FOOL YOUJ UGLY LINE OF TEXT WITH NO JOB YOYU UGLY UNNATRACTIVE DBIHYFGSTYIUDHFCTUGYHFDRETFUYGIHDCFYTUGIHFCWDRTYG I HATE YOU 
     }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("entered timing point");
-        //If button press seperated into 2 
-        ActiveThingy = true;
-        Dave = other.gameObject;
-    }
 
-    void OnTriggerExit2D(Collider2D other)
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if(UpperThingy)
+    //    Debug.Log("entered timing point");
+    //    //If button press seperated into 2 
+    //    Dave = other.gameObject;
+    //}
+
+    //void OnTriggerExit2D(Collider2D other)
+    //{
+    //    ActiveThingy=false;
+    //    Dave = null;
+    //}
+
+    public void SetUpper(bool state,GameObject obj)
     {
-        ActiveThingy=false;
-        Dave = null;
+        UpperActiveThingy = state;
+        Dave=obj;
+    }
+    public void SetLower(bool state, GameObject obj)
+    {
+        LowerActiveThingy = state;
+        Dave = obj;
     }
 }

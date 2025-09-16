@@ -9,6 +9,11 @@ TagManager:
   - Target
   - TargetRestaurantTrigger1
   - moneyInteractable
+  - MinigameObject
+  - MinigameUsePart
+  - UpMiniInteractPart
+  - LowMiniInteractPart
+  - MinigameInteractPart
   layers:
   - Default
   - TransparentFX

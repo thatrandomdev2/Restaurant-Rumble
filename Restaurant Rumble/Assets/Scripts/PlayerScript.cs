@@ -32,26 +32,26 @@ public class PlayerScript : MonoBehaviour
         else if (sprint == 1) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime*1.5f); }
 
 
-        GameObject nearestGameObject = GetClosestObject("Object");
+        //GameObject nearestGameObject = GetClosestObject("Object");
 
-        if (nearestGameObject == null)
-        {
-            distanceToNearestObject = nearestGameObject.transform.position - transform.position;
+        //if (nearestGameObject == null)
+        //{
+        //    distanceToNearestObject = nearestGameObject.transform.position - transform.position;
 
-            if (distanceToNearestObject.magnitude < 3f && minObject != null)
-            {
-                pickup.SetActive(true);
-            }
-            else
-            {
-                pickup.SetActive(false);
-            }
-        }
-        else 
-        {
-            minObject = null;
-            pickup.SetActive(false);
-        }
+        //    if (distanceToNearestObject.magnitude < 3f && minObject != null)
+        //    {
+        //        pickup.SetActive(true);
+        //    }
+        //    else
+        //    {
+        //        pickup.SetActive(false);
+        //    }
+        //}
+        //else
+        //{
+        //    minObject = null;
+        //    pickup.SetActive(false);
+        //}
 
 
         // Rotate player among movement direction

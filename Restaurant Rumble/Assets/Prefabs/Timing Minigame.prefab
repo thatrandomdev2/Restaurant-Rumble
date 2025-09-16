@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2642296998934678147}
   m_Layer: 5
   m_Name: 'interactPointb1 '
-  m_TagString: Untagged
+  m_TagString: LowMiniInteractPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 7768733674789849760}
   m_Layer: 5
   m_Name: Interactpointa3
-  m_TagString: Untagged
+  m_TagString: UpMiniInteractPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 1195494214726490434}
   m_Layer: 5
   m_Name: Interactpointa2
-  m_TagString: Untagged
+  m_TagString: UpMiniInteractPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 190780190397079557}
   m_Layer: 5
   m_Name: interactPointa1
-  m_TagString: Untagged
+  m_TagString: UpMiniInteractPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 1582786395501801582}
   m_Layer: 5
   m_Name: Interactpointb2
-  m_TagString: Untagged
+  m_TagString: LowMiniInteractPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -697,6 +697,7 @@ GameObject:
   - component: {fileID: 3560418935242901700}
   - component: {fileID: 7071100147757144935}
   - component: {fileID: 5073009079703993985}
+  - component: {fileID: 5382642325163540952}
   m_Layer: 5
   m_Name: Timing Minigame
   m_TagString: Untagged
@@ -738,7 +739,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3770243318372138005}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 0}
@@ -794,6 +795,23 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5382642325163540952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3770243318372138005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55999f9eb77518442aa81f0a184898d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointRequirement: 5
+  currentPoints: 0
+  Bar: {fileID: 5094466652787629516}
+  UpperThingy: {fileID: 1336745444679740773}
+  LowerThingy: {fileID: 2091135808563748514}
 --- !u!1 &5094466652787629516
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,14 +823,14 @@ GameObject:
   - component: {fileID: 8890063212527395238}
   - component: {fileID: 4208960349270709535}
   - component: {fileID: 4534359302387186216}
-  - component: {fileID: 2091135808563748514}
   - component: {fileID: 1336745444679740773}
+  - component: {fileID: 2091135808563748514}
   - component: {fileID: 9031953702197009551}
-  - component: {fileID: 1574634432021058743}
   - component: {fileID: 1239514033264139199}
+  - component: {fileID: 6496017801605622977}
   m_Layer: 5
   m_Name: Bar
-  m_TagString: Untagged
+  m_TagString: MinigameUsePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -874,52 +892,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!61 &2091135808563748514
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5094466652787629516}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.5615921, y: -31.367191}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 94.355835, y: 37.30149}
-  m_EdgeRadius: 0
 --- !u!61 &1336745444679740773
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -966,6 +938,52 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 94.355835, y: 30.558155}
   m_EdgeRadius: 0
+--- !u!61 &2091135808563748514
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094466652787629516}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.5615921, y: -31.367191}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 94.355835, y: 37.30149}
+  m_EdgeRadius: 0
 --- !u!114 &9031953702197009551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,20 +998,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVector: {x: 1460, y: 0, z: 0}
   speed: 0.4
---- !u!114 &1574634432021058743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5094466652787629516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55999f9eb77518442aa81f0a184898d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointRequirement: 5
-  currentPoints: 0
 --- !u!50 &1239514033264139199
 Rigidbody2D:
   serializedVersion: 5
@@ -1021,6 +1025,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6496017801605622977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094466652787629516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf53dc65eacb92f4fb9f725332fd06a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TM: {fileID: 5382642325163540952}
 --- !u!1 &7509709585325955230
 GameObject:
   m_ObjectHideFlags: 0
