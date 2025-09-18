@@ -4,6 +4,7 @@ public class InventoryManager : MonoBehaviour
 {
     GameObject player;
     public PlayerScript playerScript;
+    public GameObject[] inventorySlots;
 
     void Start()
     {
