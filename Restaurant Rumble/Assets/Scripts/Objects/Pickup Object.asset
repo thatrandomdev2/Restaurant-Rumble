@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427af0f911bce014197b4e2b6b877f80, type: 3}
   m_Name: Pickup Object
   m_EditorClassIdentifier: 
-  pickupObjectType: 2
+  pickupObjectType: 0
   UISprite: {fileID: 0}
