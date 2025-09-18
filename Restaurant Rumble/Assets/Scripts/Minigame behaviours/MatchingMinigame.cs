@@ -1,14 +1,13 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class MatchingMinigame : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    MinigameTrigger MinigameOn;
+    string[] Desiredingredients = { "one", "two", "three", "four", "five", "six", "seven" };
+    string[] Placedingredients = { "one", "two", "three", "four", "five", "six", "seven" };
 
-    // Update is called once per frame
+    //UGHHHH WHAT AM I DOING
     void Update()
     {
         

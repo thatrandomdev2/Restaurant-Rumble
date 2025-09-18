@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 124556311}
   - component: {fileID: 124556310}
   - component: {fileID: 124556314}
+  - component: {fileID: 124556315}
   m_Layer: 0
   m_Name: Cube
   m_TagString: MinigameObject
@@ -249,6 +250,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4748006, y: 1.2984327, z: 1.9252042}
   m_Center: {x: 0.005785942, y: 0.14921641, z: 0.21905893}
+--- !u!114 &124556315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124556309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60aef5c3eb37c7b4ba52015ac93bd770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewMiniGame: {fileID: 5884077233205307010, guid: 67c7e85e249b854448ecc5395440dd9b, type: 3}
 --- !u!1 &375749124
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,58 +408,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4347718326664463762, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
+    - target: {fileID: 4347718326664463762, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5629856161465461682, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
+    - target: {fileID: 5629856161465461682, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.0090542
       objectReference: {fileID: 0}
-    - target: {fileID: 5629856161465461682, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
+    - target: {fileID: 5629856161465461682, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.0000005
       objectReference: {fileID: 0}
-    - target: {fileID: 5629856161465461682, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
+    - target: {fileID: 5629856161465461682, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.5110178
       objectReference: {fileID: 0}
-    - target: {fileID: 5629856161465461682, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
+    - target: {fileID: 5629856161465461682, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.89879405
       objectReference: {fileID: 0}
-    - target: {fileID: 5629856161465461682, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
+    - target: {fileID: 5629856161465461682, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5629856161465461682, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
+    - target: {fileID: 5629856161465461682, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0.43837118
       objectReference: {fileID: 0}
-    - target: {fileID: 5629856161465461682, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
+    - target: {fileID: 5629856161465461682, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5629856161465461682, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
+    - target: {fileID: 5629856161465461682, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5629856161465461682, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
+    - target: {fileID: 5629856161465461682, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -52
       objectReference: {fileID: 0}
-    - target: {fileID: 5629856161465461682, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
+    - target: {fileID: 5629856161465461682, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4347718326664463762, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2061503857}
-  m_SourcePrefab: {fileID: 100100000, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
 --- !u!1 &551242872
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,6 +470,7 @@ GameObject:
   - component: {fileID: 551242874}
   - component: {fileID: 551242873}
   - component: {fileID: 551242877}
+  - component: {fileID: 551242878}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: MinigameObject
@@ -576,6 +588,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4748006, y: 1.2984327, z: 1.9252042}
   m_Center: {x: 0.005785942, y: 0.14921641, z: 0.21905893}
+--- !u!114 &551242878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551242872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60aef5c3eb37c7b4ba52015ac93bd770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewMiniGame: {fileID: 5884077233205307010, guid: 67c7e85e249b854448ecc5395440dd9b, type: 3}
 --- !u!1 &1040389849
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +722,7 @@ GameObject:
   - component: {fileID: 1073593895}
   - component: {fileID: 1073593894}
   - component: {fileID: 1073593898}
+  - component: {fileID: 1073593899}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: MinigameObject
@@ -814,6 +840,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4748006, y: 1.2984327, z: 1.9252042}
   m_Center: {x: 0.005785942, y: 0.14921641, z: 0.21905893}
+--- !u!114 &1073593899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073593893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60aef5c3eb37c7b4ba52015ac93bd770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewMiniGame: {fileID: 5884077233205307010, guid: 67c7e85e249b854448ecc5395440dd9b, type: 3}
 --- !u!1 &1595896650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,26 +1083,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2061503848 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4347718326664463762, guid: f45ac097ffe9dd64b8fd8d653b3c7473, type: 3}
-  m_PrefabInstance: {fileID: 547254114}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2061503857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061503848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17c0ed09d6d2b2b43aa68412cc7ea679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InInteractArea: 0
-  MinigameOn: 0
-  MinigameScene: {fileID: 3560418935242901700, guid: 4e5dfb9b210ee7647b05d68c534a01bb, type: 3}
 --- !u!1 &2096019780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,6 +1096,7 @@ GameObject:
   - component: {fileID: 2096019782}
   - component: {fileID: 2096019781}
   - component: {fileID: 2096019785}
+  - component: {fileID: 2096019786}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: MinigameObject
@@ -1194,6 +1214,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4748006, y: 2.1758823, z: 2.6583006}
   m_Center: {x: 0.005785942, y: 0.58794117, z: 0.5856072}
+--- !u!114 &2096019786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096019780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60aef5c3eb37c7b4ba52015ac93bd770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewMiniGame: {fileID: 5884077233205307010, guid: 67c7e85e249b854448ecc5395440dd9b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class TimingMinigame : MonoBehaviour
     private bool UpperActiveThingy;
     private bool LowerActiveThingy;
     private GameObject Dave;
+ 
     [SerializeField] GameObject Bar;
     [SerializeField] Component UpperThingy;
     [SerializeField] Component LowerThingy;
