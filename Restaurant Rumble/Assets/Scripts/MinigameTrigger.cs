@@ -15,10 +15,11 @@ public class MinigameTrigger : MonoBehaviour
     public bool MinigameOn;
     public int MinigamesWon;
     public Canvas miniGame;
+
     [SerializeField] Canvas MinigameScene; //i have never wanted to tell a piece of text to end its own life before but that might change RIGHT HERE APPARENTLY
     void Update()
     {
-        
+
        if (InInteractArea&&Input.GetKeyDown(KeyCode.Space)&&MinigameOn==false)
         {
             miniGame = Instantiate(MinigameScene);
@@ -53,6 +54,7 @@ public class MinigameTrigger : MonoBehaviour
         if (other.CompareTag("MinigameObject"))
         {
             InInteractArea = true;
+            MinigameScene = other.GetComponent<MinigameChange>().GetCanvas();
         }
         
         
@@ -63,6 +65,7 @@ public class MinigameTrigger : MonoBehaviour
         if (other.CompareTag("MinigameObject"))
         {
             InInteractArea =false;
+            MinigameScene = null;
         }
               
     }
