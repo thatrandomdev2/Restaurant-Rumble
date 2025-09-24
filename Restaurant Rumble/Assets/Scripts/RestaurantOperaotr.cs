@@ -21,8 +21,16 @@ public class RestaurantOperaotr : MonoBehaviour
 
     public IEnumerator CustomerSpawner()
     {
+        if (playerInteract == null)
+        {
+            playerInteract = FindObjectOfType<PlayerInteract>();
+            if (playerInteract == null)
+            {
+                Debug.LogError("PlayerInteract not found in the scene.");
+                yield break;
+            }
+        }
         Instantiate(Customer);
-        new WaitForSeconds(4 * playerInteract.customerInflux);
-        yield return null;
+        yield return new WaitForSeconds(4 * playerInteract.customerInflux);
     }
 }
