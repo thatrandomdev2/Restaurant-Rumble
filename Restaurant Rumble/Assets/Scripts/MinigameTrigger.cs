@@ -15,7 +15,7 @@ public class MinigameTrigger : MonoBehaviour
     public bool MinigameOn;
     public int MinigamesWon;
     public Canvas miniGame;
-
+    Rigidbody rb;
     [SerializeField] Canvas MinigameScene; //i have never wanted to tell a piece of text to end its own life before but that might change RIGHT HERE APPARENTLY
     void Update()
     {
@@ -33,20 +33,27 @@ public class MinigameTrigger : MonoBehaviour
         {
             return;
         }
-       
+
 
        if (MinigameOn)
         {
             InInteractArea = false;
-        }
 
-        if (miniGame.GetComponent<TimingMinigame>().currentPoints == miniGame.GetComponent<TimingMinigame>().pointRequirement)
+        }
+        if (miniGame.GetComponent<TimingMinigame>())
         {
-        Debug.Log("You DID IT :D");
-        MinigameOn = false;
-            Destroy(miniGame.gameObject);
-            MinigamesWon ++;
-        } 
+            if (miniGame.GetComponent<TimingMinigame>().currentPoints == miniGame.GetComponent<TimingMinigame>().pointRequirement)
+            {
+                Debug.Log("You DID IT :D");
+                MinigameOn = false;
+                Destroy(miniGame.gameObject);
+                MinigamesWon++;
+            }
+        }
+        else if (miniGame.GetComponent<MatchingMinigame>())
+        {
+
+        }
     }
 
     void OnTriggerEnter(Collider other) //minigame trigger & appear
