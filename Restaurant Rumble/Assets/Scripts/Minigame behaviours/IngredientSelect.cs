@@ -9,7 +9,7 @@ public class IngredientSelect : MonoBehaviour
     [SerializeField] float movementSpeed;
     void Update()
     {
-        if (MinigameOn && minigame.GetComponent<MatchingMinigame>()) { Transform.Position += (new Vector2(moveInput.x, moveInput.y) * movementSpeed * Time.deltaTime); }
+        //if (MinigameOn && minigame.GetComponent<MatchingMinigame>()) { Transform.Position += (new Vector2(moveInput.x, moveInput.y) * movementSpeed * Time.deltaTime); }
         
     }
     // I NEED AN ENTIRELY SEPERATE MOVE SYSTEM WTF
