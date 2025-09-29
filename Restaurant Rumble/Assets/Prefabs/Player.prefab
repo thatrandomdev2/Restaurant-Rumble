@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customerInflux: 1
-  interactible: {fileID: 0}
+  interactible: {fileID: 5113828218212736899, guid: 085f2bff67704624c8efec3f7d32e324, type: 3}
   customerSatisf: 1
   currentMoneys: 0
   startingMoneys: 100

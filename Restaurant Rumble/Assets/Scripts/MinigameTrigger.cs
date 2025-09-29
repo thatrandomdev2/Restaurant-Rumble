@@ -13,6 +13,7 @@ public class MinigameTrigger : MonoBehaviour
      //TimingMinigame pointRequirement;
     public bool InInteractArea;
     public bool MinigameOn;
+    public bool MinigameHasBeenWon;
     public int MinigamesWon;
     public Canvas miniGame;
     Rigidbody rb;
@@ -26,7 +27,7 @@ public class MinigameTrigger : MonoBehaviour
             MinigameOn= true;
            Debug.Log("you interacted with the thingy");
 
-           
+            MinigameHasBeenWon = false;
         }
 
        if(miniGame==null)
@@ -48,6 +49,7 @@ public class MinigameTrigger : MonoBehaviour
                 MinigameOn = false;
                 Destroy(miniGame.gameObject);
                 MinigamesWon++;
+                MinigameHasBeenWon = true;
             }
         }
         else if (miniGame.GetComponent<MatchingMinigame>())

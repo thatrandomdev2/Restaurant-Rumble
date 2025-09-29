@@ -60,7 +60,7 @@ public class CustomerPF : MonoBehaviour
             if (dist < 0.5f)
             {
                 agent.isStopped = true;
-                // they'll do something here idk
+                Destroy(this.gameObject);
             }
         }
     }
@@ -106,8 +106,7 @@ public class CustomerPF : MonoBehaviour
     private GameObject FindNearestReturnSpot()
     {
         GameObject[] returnSpots = GameObject.FindGameObjectsWithTag("ReturnSpot");
-        if (returnSpots.Length == 0)
-            return null;
+        if (returnSpots.Length == 0) return null;
 
         GameObject nearest = null;
         float minDist = float.MaxValue;
@@ -118,9 +117,11 @@ public class CustomerPF : MonoBehaviour
             float dist = Vector3.Distance(currentPos, spot.transform.position);
             if (dist < minDist)
             {
+               
                 minDist = dist;
                 nearest = spot;
             }
+    
         }
         return nearest;
     }
