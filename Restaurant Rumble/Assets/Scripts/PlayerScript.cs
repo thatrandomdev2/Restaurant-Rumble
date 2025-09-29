@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
     Vector2 moveInput;
     float sprint;
     Rigidbody rb;
+    public Animator animator;
 
     // Inventory Variables
 
@@ -32,6 +33,10 @@ public class PlayerScript : MonoBehaviour
         if (sprint == 0) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime); }
 
         else if (sprint == 1) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime * 1.5f); }
+
+        animator.SetFloat("Speed", moveInput.magnitude); 
+
+        print(moveInput.magnitude);
 
         // Detects whether there are pickup objects close enough to enable the pickup pop up
 
