@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pickup Object
   m_EditorClassIdentifier: 
   pickupObjectType: 0
-  UISprite: {fileID: 0}
+  UISprite: {fileID: -1968949815, guid: 25ae7bedab6845a4a929a661e134d9dd, type: 3}
