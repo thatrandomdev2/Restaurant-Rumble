@@ -948,6 +948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7615468356766136804, guid: b034cddfe469fb245aa8b1ac58b0754a, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 46768335}
     - target: {fileID: 8222670992052075535, guid: b034cddfe469fb245aa8b1ac58b0754a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1412,6 +1416,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5844934912075238235, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1905390342}
     - target: {fileID: 5844934912075238235, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: pickupPopUp
       value: 

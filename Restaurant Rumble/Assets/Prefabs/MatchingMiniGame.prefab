@@ -1057,7 +1057,7 @@ GameObject:
   - component: {fileID: 569430653413195654}
   m_Layer: 5
   m_Name: MatchingMiniGame
-  m_TagString: Untagged
+  m_TagString: MatchingGUH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1077,7 +1077,6 @@ RectTransform:
   - {fileID: 3391136370706473895}
   - {fileID: 4246147118078399829}
   - {fileID: 4727350098837632921}
-  - {fileID: 6833535444793959257}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1160,81 +1159,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26906a5c9be055c419def7d32cf9a3ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &8936476453283427776
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4266446614740006857}
-    m_Modifications:
-    - target: {fileID: 1706158605789860600, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_Name
-      value: '"Mouse"'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 38.775402
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 44.62661
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 38.775402
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 27.499977
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -25.056
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6046851761017812477, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-      propertyPath: m_SortingLayer
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
---- !u!4 &6833535444793959257 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2508827924986451609, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}
-  m_PrefabInstance: {fileID: 8936476453283427776}
-  m_PrefabAsset: {fileID: 0}
+  Mousey: {fileID: 1706158605789860600, guid: 0890c6f577eba5243ba777dfe2a73fec, type: 3}

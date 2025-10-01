@@ -8,6 +8,8 @@ public class MatchingMinigame : MonoBehaviour
     List<string> Desiredingredients = new List<string>();
     string[] Placedingredients = { "one", "two", "three", "four", "five", "six", "seven" };
     string[] Availableingridients = { "one", "two", "three", "four", "five", "six", "seven" };
+    [SerializeField] GameObject Mousey;
+
     //UGHHHH WHAT AM I DOING
 
     void Start()
@@ -16,6 +18,7 @@ public class MatchingMinigame : MonoBehaviour
         foreach (string s in Desiredingredients)
         {
             Debug.Log(s);
+            Instantiate(Mousey,transform);
         }
         
     }

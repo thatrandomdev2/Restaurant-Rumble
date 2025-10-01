@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 527250253468547091}
   - component: {fileID: 6139826645386006275}
   - component: {fileID: 7288256197351962265}
+  - component: {fileID: 7258744076752300832}
   m_Layer: 0
   m_Name: _Mouse_
   m_TagString: Untagged
@@ -102,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dad14bb0c5b8fc41b1833e37d8c1eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseMovementSpeed: 0
+  mouseMovementSpeed: 5
 --- !u!50 &6139826645386006275
 Rigidbody2D:
   serializedVersion: 5
@@ -180,3 +181,33 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &7258744076752300832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706158605789860600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: e1e8a26178de2b443b07f9432f72cac9, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: New action map
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

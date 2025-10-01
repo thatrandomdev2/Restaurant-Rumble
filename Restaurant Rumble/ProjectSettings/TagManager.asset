@@ -16,6 +16,8 @@ TagManager:
   - MinigameInteractPart
   - ReturnSpot
   - Customer
+  - MatchingGUH
+  - PlyrMouse
   layers:
   - Default
   - TransparentFX
