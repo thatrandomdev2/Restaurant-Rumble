@@ -599,6 +599,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2393150389053502791, guid: b034cddfe469fb245aa8b1ac58b0754a, type: 3}
   m_PrefabInstance: {fileID: 3268333384818960870}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &576291959 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2619513988986550991, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
+  m_PrefabInstance: {fileID: 1457876339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &667540063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -871,6 +876,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1183524146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1011162524663193908, guid: b034cddfe469fb245aa8b1ac58b0754a, type: 3}
+  m_PrefabInstance: {fileID: 3268333384818960870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1305054629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2185440573922608164, guid: b034cddfe469fb245aa8b1ac58b0754a, type: 3}
+  m_PrefabInstance: {fileID: 3268333384818960870}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1457876339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -923,6 +938,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5844934912075238235, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 576291959}
     - target: {fileID: 5844934912075238235, guid: ad4f6503fcb9c9d428830661e05dbf21, type: 3}
       propertyPath: pickupPopUp
       value: 
@@ -994,6 +1013,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 085f2bff67704624c8efec3f7d32e324, type: 3}
+--- !u!1 &2146467856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8076481676410911695, guid: b034cddfe469fb245aa8b1ac58b0754a, type: 3}
+  m_PrefabInstance: {fileID: 3268333384818960870}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3268333384818960870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1014,6 +1038,22 @@ PrefabInstance:
       propertyPath: playerScript
       value: 
       objectReference: {fileID: 273038346}
+    - target: {fileID: 7615468356766136804, guid: b034cddfe469fb245aa8b1ac58b0754a, type: 3}
+      propertyPath: inventorySlots.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615468356766136804, guid: b034cddfe469fb245aa8b1ac58b0754a, type: 3}
+      propertyPath: 'inventorySlots.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2146467856}
+    - target: {fileID: 7615468356766136804, guid: b034cddfe469fb245aa8b1ac58b0754a, type: 3}
+      propertyPath: 'inventorySlots.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1305054629}
+    - target: {fileID: 7615468356766136804, guid: b034cddfe469fb245aa8b1ac58b0754a, type: 3}
+      propertyPath: 'inventorySlots.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1183524146}
     - target: {fileID: 8222670992052075535, guid: b034cddfe469fb245aa8b1ac58b0754a, type: 3}
       propertyPath: m_Pivot.x
       value: 0

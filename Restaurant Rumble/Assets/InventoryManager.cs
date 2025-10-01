@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -18,7 +19,17 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        for (int i = 0; i < 3; i++)
+        {
+            if (playerScript.pickupObjects[i] != null)
+            {
+                inventorySlots[i].GetComponent<Image>().sprite = playerScript.pickupObjects[i].UISprite;
+            }
+            else 
+            {
+                inventorySlots[i].GetComponent<Image>().sprite = null;
+            }
+        }
     }
 
     void OnPrevious(InputValue value)
