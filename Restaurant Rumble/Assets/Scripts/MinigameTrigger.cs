@@ -17,6 +17,8 @@ public class MinigameTrigger : MonoBehaviour
     public Canvas miniGame;
     Rigidbody rb;
     [SerializeField] Canvas MinigameScene; //i have never wanted to tell a piece of text to end its own life before but that might change RIGHT HERE APPARENTLY
+    [SerializeField] GameObject Mousey;
+    Vector3 playerPosition;
     void Update()
     {
 
@@ -24,8 +26,8 @@ public class MinigameTrigger : MonoBehaviour
         {
             miniGame = Instantiate(MinigameScene);
             MinigameOn= true;
+            playerPosition = transform.position;
            Debug.Log("you interacted with the thingy");
-
            
         }
 
@@ -38,6 +40,7 @@ public class MinigameTrigger : MonoBehaviour
        if (MinigameOn)
         {
             InInteractArea = false;
+            transform.position = playerPosition;
 
         }
         if (miniGame.GetComponent<TimingMinigame>())
