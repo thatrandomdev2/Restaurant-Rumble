@@ -18,6 +18,9 @@ TagManager:
   - Customer
   - MatchingGUH
   - PlyrMouse
+  - MOVERIGHTNOW
+  - MOVELEFTNOW
+  - MOVENOW
   layers:
   - Default
   - TransparentFX
