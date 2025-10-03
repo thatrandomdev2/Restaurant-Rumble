@@ -7,7 +7,7 @@ public class HItNRun : MonoBehaviour
     
     void Update()
     {
-        transform.Translate(Vector2.right * movespeed * direction*Time.deltaTime);
+        transform.Translate(Vector2.left * movespeed * direction*Time.deltaTime);
     }
     void OnTriggerEnter2D(Collider2D other)
     {
