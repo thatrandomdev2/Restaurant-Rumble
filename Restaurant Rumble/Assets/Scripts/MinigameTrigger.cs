@@ -17,7 +17,7 @@ public class MinigameTrigger : MonoBehaviour
     public Canvas miniGame;
     Rigidbody rb;
     [SerializeField] Canvas MinigameScene; //i have never wanted to tell a piece of text to end its own life before but that might change RIGHT HERE APPARENTLY
-    [SerializeField] GameObject Mousey;
+   // [SerializeField] GameObject Mousey;
     Vector3 playerPosition;
     void Update()
     {
@@ -47,6 +47,7 @@ public class MinigameTrigger : MonoBehaviour
         {
             if (miniGame.GetComponent<TimingMinigame>().currentPoints == miniGame.GetComponent<TimingMinigame>().pointRequirement)
             {
+                miniGame.GetComponent<TimingMinigame>().player.gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
                 Debug.Log("You DID IT :D");
                 MinigameOn = false;
                 Destroy(miniGame.gameObject);

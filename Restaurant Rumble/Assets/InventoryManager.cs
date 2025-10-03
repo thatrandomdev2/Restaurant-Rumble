@@ -19,7 +19,7 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < inventorySlots.Length; i++)
         {
             if (playerScript.pickupObjects[i] != null)
             {
