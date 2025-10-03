@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,7 +20,10 @@ public class PlayerScript : MonoBehaviour
     PopUpScript popUpScript;
     public List<PickupObject> pickupObjects = new List<PickupObject>();
     Vector3 distanceToNearestObject;
+    Vector3 distanceToNearestCustomer;
     GameObject nearestGameObject;
+    GameObject nearestCustomer;
+    bool isNearAnyObject;
 
     void Start()
     {
@@ -30,6 +34,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         // Moves the player
+        // this movement makes it so that the player doesn't collide
 
         if (sprint == 0) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime); }
 
@@ -42,6 +47,7 @@ public class PlayerScript : MonoBehaviour
         // Detects whether there are pickup objects close enough to enable the pickup pop up
 
         nearestGameObject = GetClosestObject("Object");
+        nearestCustomer = GetClosestObject("Customer");
 
         if (nearestGameObject != null && pickupObjects.Count <= 2)
         {
@@ -62,6 +68,14 @@ public class PlayerScript : MonoBehaviour
             popUpScript.popUpEnabled = false;
         }
 
+        if (nearestCustomer != null && pickupObjects.Count != 0)
+        {
+            distanceToNearestCustomer = nearestCustomer.transform.position - transform.position;
+        }
+        else
+        {
+            nearestCustomer = null;
+        }
 
         // Rotates player among movement direction
 
@@ -88,6 +102,14 @@ public class PlayerScript : MonoBehaviour
         {
             pickupObjects.Add(nearestGameObject.GetComponent<Object>().pickupObject);
             Destroy(nearestGameObject);
+        }
+
+        if (distanceToNearestCustomer.magnitude <3f && nearestCustomer !=null && pickupObjects.Count !=0)
+        {
+            nearestCustomer.GetComponent<CustomerPF>().isServed = true;
+            GetComponentInParent<PlayerInteract>().currentMoneys += 5;
+            pickupObjects.RemoveAt(0);
+            return;
         }
     }
 

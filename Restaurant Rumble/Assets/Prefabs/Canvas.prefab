@@ -955,7 +955,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selection: {fileID: 1779028609805831164}
   playerScript: {fileID: 0}
-  inventorySlots: []
+  inventorySlots:
+  - {fileID: 8076481676410911695}
+  - {fileID: 2185440573922608164}
+  - {fileID: 1011162524663193908}
 --- !u!114 &6305924364767996508
 MonoBehaviour:
   m_ObjectHideFlags: 0
