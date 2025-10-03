@@ -9,12 +9,12 @@ public class MinigameUSeCollision : MonoBehaviour
         if (collision.CompareTag("UpMiniInteractPart"))
         {
             TM.SetUpper(true, collision.gameObject);
-            Debug.Log("Upper Works!");
+            //Debug.Log("Upper Works!");
         }
         else if (collision.CompareTag("LowMiniInteractPart"))
         {
             TM.SetLower(true, collision.gameObject);
-            Debug.Log("Lower Works!");
+           // Debug.Log("Lower Works!");
         }
     }
 
