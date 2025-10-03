@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8381504639716216805}
   m_Layer: 5
   m_Name: gridient 4
-  m_TagString: Untagged
+  m_TagString: Ingredients
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 4489896448016710930}
   m_Layer: 5
   m_Name: Gridient 2
-  m_TagString: Untagged
+  m_TagString: Ingredients
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 1765091561693465512}
   m_Layer: 5
   m_Name: Gridient 7
-  m_TagString: Untagged
+  m_TagString: Ingredients
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 2953038026965513877}
   m_Layer: 5
   m_Name: gridient 5
-  m_TagString: Untagged
+  m_TagString: Ingredients
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 8753738636829310564}
   m_Layer: 5
   m_Name: gridient 3
-  m_TagString: Untagged
+  m_TagString: Ingredients
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 9204531257413693413}
   m_Layer: 5
   m_Name: Gridient 1
-  m_TagString: Untagged
+  m_TagString: one
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -934,7 +934,7 @@ GameObject:
   - component: {fileID: 8170251815058969746}
   m_Layer: 5
   m_Name: gridient 6
-  m_TagString: Untagged
+  m_TagString: Ingredients
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

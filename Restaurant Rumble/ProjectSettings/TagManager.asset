@@ -18,6 +18,10 @@ TagManager:
   - Customer
   - MatchingGUH
   - PlyrMouse
+  - MOVERIGHTNOW
+  - MOVELEFTNOW
+  - Ingredients
+  - one
   layers:
   - Default
   - TransparentFX
