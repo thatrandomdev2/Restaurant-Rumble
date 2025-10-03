@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
+  animator: {fileID: 2619513988986550991}
   pickupPopUp: {fileID: 0}
   pickupObjects: []
 --- !u!136 &3001974807921794450
@@ -323,9 +324,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InInteractArea: 0
   MinigameOn: 0
+  MinigameHasBeenWon: 0
   MinigamesWon: 0
   miniGame: {fileID: 0}
   MinigameScene: {fileID: 3560418935242901700, guid: 4e5dfb9b210ee7647b05d68c534a01bb, type: 3}
+  Mousey: {fileID: 0}
 --- !u!1 &5474720360723268374
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         // Moves the player
+        // this movement makes it so that the player doesn't collide
 
         if (sprint == 0) { transform.position += (new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed * Time.deltaTime); }
 
