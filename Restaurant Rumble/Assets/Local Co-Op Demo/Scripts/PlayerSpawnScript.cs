@@ -5,7 +5,7 @@ public class PlayerSpawnScript : MonoBehaviour
     public Transform[] SpawnPoints;
     private int m_playerCount;
 
-    public void OnPlayerJoined(PlayerInput playerInput)
+    public void OnPlayerJoined(PlayerScript playerInput)
     {
         playerInput.transform.position = SpawnPoints[m_playerCount].transform.position;
         
