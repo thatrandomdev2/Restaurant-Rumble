@@ -12,13 +12,13 @@ public class Oscillator : MonoBehaviour
 
     void Start()
     {
-        startPosition = transform.position;
+        startPosition = transform.localPosition;
         endPosition = startPosition + movementVector;
     }
 
     void Update()
     {
         movementFactor = Mathf.PingPong(Time.time * speed, 1f);
-        transform.position = Vector3.Lerp(startPosition, endPosition, movementFactor);
+        transform.localPosition = Vector3.Lerp(startPosition, endPosition, movementFactor);
     }
 }
