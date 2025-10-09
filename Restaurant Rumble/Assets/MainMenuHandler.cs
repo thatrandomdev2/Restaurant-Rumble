@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         
@@ -13,5 +13,10 @@ public class MainMenuHandler : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("Main Game");
+    }
+
+    public void loadnewScene(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName);
     }
 }

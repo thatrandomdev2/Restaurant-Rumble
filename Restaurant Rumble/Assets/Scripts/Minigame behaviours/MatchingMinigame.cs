@@ -8,14 +8,13 @@ public class MatchingMinigame : MonoBehaviour
     public List<string> Desiredingredients = new List<string>();
     public string[] Placedingredients = { "one", "two", "three", "four", "five", "six", "seven" };
     public GameObject[] Availableingridients;
-    [SerializeField] GameObject Mousey;
     
     //UGHHHH WHAT AM I DOING
 
     void Start()
     {
    //     Availableingridients = Placedingredients;
-        Instantiate(Mousey, transform);
+
         GenerateDesiredingridients();
         foreach (string s in Desiredingredients)
         {

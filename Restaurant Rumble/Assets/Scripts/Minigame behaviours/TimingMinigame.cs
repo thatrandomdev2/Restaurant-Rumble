@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 public class TimingMinigame : MonoBehaviour
 {
     public int pointRequirement = 5;
@@ -7,20 +8,27 @@ public class TimingMinigame : MonoBehaviour
     private bool UpperActiveThingy;
     private bool LowerActiveThingy;
     private GameObject Dave;
- 
+    public PlayerScript player;
     [SerializeField] GameObject Bar;
     [SerializeField] Component UpperThingy;
     [SerializeField] Component LowerThingy;
 
-   
+    private void Start()
+    {
+        player = FindFirstObjectByType<PlayerScript>();
+        player.gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("MiniGame");
+    }
+
     void Update()
     {
-        if (UpperActiveThingy&&Input.GetKeyDown(KeyCode.A)&&Dave!=null) {
+        if (player.MinigameInteractA > 0) print("Pressed A");
+        if (UpperActiveThingy&& player.MinigameInteractA > 0 &&Dave!=null) 
+        {
             currentPoints++;
             Dave.GetComponent<Image>().color = Color.green;
             Dave.GetComponent<Collider2D>().enabled = false;
         }
-        else if (LowerActiveThingy&&Input.GetKeyDown(KeyCode.D) && Dave != null)
+        else if (LowerActiveThingy&& player.MinigameInteractB > 0 && Dave != null)
         {
             currentPoints++;
             Dave.GetComponent<Image>().color = Color.green;

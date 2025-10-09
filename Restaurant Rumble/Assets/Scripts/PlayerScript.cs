@@ -12,7 +12,8 @@ public class PlayerScript : MonoBehaviour
     float sprint;
     Rigidbody rb;
     public Animator animator;
-
+    public float MinigameInteractA;
+    public float MinigameInteractB;
     // Inventory Variables
 
     [SerializeField] GameObject pickupPopUp;
@@ -112,6 +113,15 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    public void OnMinigameInteractA(InputValue value)
+    {
+        MinigameInteractA = value.Get<float>();
+    }
+
+    public void OnMinigameInteractB(InputValue value)
+    {
+        MinigameInteractB = value.Get<float>();
+    }
     // Finds the nearest object of a tag to the parent of the script; returns null if no objects are found
 
     GameObject GetClosestObject(string tag)

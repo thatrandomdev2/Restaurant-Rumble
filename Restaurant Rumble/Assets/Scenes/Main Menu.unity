@@ -1078,14 +1078,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 196579262}
         m_TargetAssemblyTypeName: MainMenuHandler, Assembly-CSharp
-        m_MethodName: LoadGame
-        m_Mode: 1
+        m_MethodName: loadnewScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: CharacterSelect
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1389595018

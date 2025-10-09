@@ -14,7 +14,7 @@ public class HItNRun : MonoBehaviour
         if (other.CompareTag("MOVERIGHTNOW"))
         {
             direction = -1;
-            Debug.Log("whar");
+           // Debug.Log("whar");
         }
         else if (other.CompareTag("MOVELEFTNOW"))
         {
