@@ -24,6 +24,7 @@ public class PlayerScript : MonoBehaviour
     GameObject nearestGameObject;
     GameObject nearestCustomer;
     bool isNearAnyObject;
+	public CountdownTimer timer; 
 
     void Start()
     {
@@ -107,6 +108,10 @@ public class PlayerScript : MonoBehaviour
         if (distanceToNearestCustomer.magnitude <3f && nearestCustomer !=null && pickupObjects.Count !=0)
         {
             nearestCustomer.GetComponent<CustomerPF>().isServed = true;
+	if (timer != null)
+   	 {
+        	timer.AddTime(5f); // Adds 5 seconds
+    	}
             GetComponentInParent<PlayerInteract>().currentMoneys += 5;
             pickupObjects.RemoveAt(0);
             return;

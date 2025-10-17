@@ -21,6 +21,9 @@ public class InventoryManager : MonoBehaviour
     {
         for (int i = 0; i < inventorySlots.Length; i++)
         {
+		if (playerScript == null) {
+		return;
+		}
             if (playerScript.pickupObjects[i] != null)
             {
                 inventorySlots[i].GetComponent<Image>().sprite = playerScript.pickupObjects[i].UISprite;

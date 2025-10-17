@@ -15,9 +15,16 @@ public class CustomerPF : MonoBehaviour
 
     private bool atTarget = false;
     private bool returning = false;
+private CountdownTimer timer;
 
     void Start()
     {
+// Automatically find the first active CountdownTimer in the scene
+        timer = FindObjectOfType<CountdownTimer>();
+        if (timer == null)
+        {
+            Debug.LogWarning("No CountdownTimer found in the scene!");
+        }
         agent = GetComponent<NavMeshAgent>();
         target = FindNextAvailableTarget();
         if (target != null)
@@ -42,6 +49,10 @@ public class CustomerPF : MonoBehaviour
 
         if (isServed && atTarget && !returning)
         {
+	if (timer != null)
+    	{
+        	timer.AddTime(5f); // Adds 5 seconds
+    	}
             // set return spot and start returning
             returnSpot = FindNearestReturnSpot();
             if (returnSpot != null)
